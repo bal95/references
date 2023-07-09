@@ -143,8 +143,121 @@ lang as English and country as US -->
         <!-- else, display google-logo.jpg -->
         <img src="google-logo.png" alt="Google logo">
     </picture>
+    <br><br>
 
-    
+    <!-- Tables are used to arrange data in rows and columns. Table styling can be found in CSS practice code. -->
+    <table>
+        <!-- defines a table caption -->
+        <caption>A list of capital cities</caption>
+        <!-- defines a table row -->
+        <tr>
+            <!-- th defines a table header cell. They are displayed in bold. -->
+            <th>Continent</th>
+            <th>Country</th>
+            <th>Capital</th>
+        </tr>
+        <tr>
+            <!-- td defines a table data cell -->
+            <td>North America</td>
+            <td>United States of America</td>
+            <td>Washington D.C.</td>
+        </tr>
+        <tr>
+            <td>Asia</td>
+            <td>India</td>
+            <td>New Delhi</td>
+        </tr>
+        <tr>
+            <td>Europe</td>
+            <td>Italy</td>
+            <td>Rome</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- tables with column and row spans, which tells how many columns (colspan) or rows (rowspan) should a cell occupy -->
+    <table>
+        <!-- colgroup is used to style specific groups of columns. Below changes background color to blue for first 2 columns. colgroup should be used again
+        to style next group of columns -->
+        <!-- colgroup should be used after caption tag and before any other table elements -->
+        <!-- if style is not used, columns will have no stylings -->
+        <colgroup>
+            <col span="2" style="background-color: blue;">
+        </colgroup>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Baljeet</td>
+            <td>Singh</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>999</td>
+        </tr>
+    </table>
+    <br>
+
+    <!-- Unordered lists are used to display data in list with bullets (by default) -->
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+
+    <!-- Ordered lists are used to display data in numbered list -->
+    <ol>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ol>
+
+    <!-- Description lists are used to display list terms with descriptions for each of them -->
+    <!-- dl - description list; dt - description term; dd - description details -->
+    <dl>
+        <dt>Apple</dt>
+        <dd>- Red in color</dd>
+        <dt>Banana</dt>
+        <dd>- Yellow in color</dd>
+        <dt>Orange</dt>
+        <dd>- It should be obvious</dd>
+    </dl>
+
+    <!-- Lists can be nested -->
+    <ul>
+        <li>Name should consist of:
+            <ul>
+                <li>First name</li>
+                <li>Last name</li>
+            </ul>
+        </li>
+        <li>Age in years</li>
+        <li>Country of residence</li>
+    </ul>
+
+    <!-- ordered list can have different types of numbering, as stated in type attribute:
+    1 - number
+    A/a - alphabetical
+    I/i - roman number-->
+    <ol type="a">Eligibility criteria:
+        <li>Must be citizen of India</li>
+        <li>Must not be below 18 years of age</li>
+        <li>Should have overall passed 12th Board exams with atleast 80% and:
+            <ol type="i">
+                <li>Scored atleast 80% in English, and</li>
+                <li>Scored an average of atleast 70% in PCM</li>
+            </ol>
+        </li>
+    </ol>
+
+    <!-- It is possible to control the counting of ordered list with start attribute -->
+    <ol start="30">Highlighting points 30 and 31:
+        <li>Scored atleast 70% in Maths</li>
+        <li>Scored atleast 80% in English</li>
+    </ol>
 
 </body>
 </html>
