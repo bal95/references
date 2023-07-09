@@ -8,6 +8,9 @@ lang as English and country as US -->
 <head>
     <!-- To define the title of the HTML page, which is then displayed at the page's tab in the browser -->
     <title>Document</title>
+    <!-- link tags are used to create relationships between the document and external resources -->
+    <!-- link tag can be used to create favicons, which are images displayed to the left of title -->
+    <link rel="icon" href="google-logo.png" type="image/x-icon">
 </head>
 <!-- body defines the document's body and serve as a container for visible contents of the webpage -->
 <body>
@@ -26,7 +29,7 @@ lang as English and country as US -->
     <!-- This paragraph uses style attribute to change its color to red. title stores info about the element; hover over the text in the webpage to display the title -->
     <p style="color:red;" title="Red paragraph">This is a red paragraph</p>
 
-    <!-- a tag is called anchor and is used to form HTML links. href stores the destination. -->
+    <!-- a tag is called anchor and is used to form HTML links. href stores the destination. Can be used over text, image or any other HTML element. -->
     <a href="https://www.google.com">Google!</a>
 
     <!-- To provide line breaks; this can be used inside text of an element as well, so as to display the text in next line -->
@@ -65,7 +68,83 @@ lang as English and country as US -->
     <p><ins>This is inserted - displayed underlined</ins></p>
     <p>That's how <sub>subscripted</sub> and <sup>superscripted</sup> texts are displayed</p>
 
+    <!-- q tag is used to put the text in quotations -->
+    <p>Copernicus said, <q>The planets go around the sun.</q></p>
     
+    <!-- To quote multiple lines, blockquotes are used. Browsers indent the text in blockquote tags. cite attribute is used to refer to the destination
+    from which the quotation is used. -->
+    <p>About WWF:</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+    </blockquote>
+
+    <!-- abbr is used to abbreviate a word. Hover over the word in the webpage to get the full word. -->
+    <p>Vince McMahon is the owner of <abbr title="World Wrestling Entertainment">WWE</abbr></p>
+
+    <!-- address is used to store the contact information of the owner of document or article. Text is rendered in italics and the browser always adds 
+    line breaks before and after the text -->
+    <p>Visit us at:</p>
+    <address>
+        johndoe.com <br>
+        somewhere street <br>
+        some place
+    </address>
+
+    <!-- cite is used to define the title of a creative work. Text is rendered in italics. -->
+    <p>Currently I am reading a book called <cite>The C++ Programming Language</cite> by Bjarne Stroustrup</p>
+
+    <!-- bdo stands for bi-directional override. Used to change the direction of text to be displayed. dir (for direction) stores left-to-right (ltr, default)
+    or right-to-left (rtl) -->
+    <p><bdo dir="rtl">This will be displayed from right to left.</bdo></p>
     
+    <!-- anchor tag can have 4 targets - self to open in the same window (default), blank to open in a different window, parent to open in the frame of immediate 
+    parent of the window and top to open in the topmost window of the hierarchy -->
+    <p><a href="https://www.google.com" target="_self">Opens in current window/tab</a></p>
+    <p><a href="https://www.google.com" target="_blank">Opens in new tab</a></p>
+    <p><a href="https://www.google.com" target="_parent">Opens in parent frame</a></p>
+    <p><a href="https://www.google.com" target="_top">Opens in full body of the window</a></p>
+    
+    <!-- use mailto in href to send mail to the recipient in the user's email program -->
+    <p><a href="mailto:johndoe@gmail.com">Send mail</a></p>
+
+    <!-- Create links over images. Hover over the image to show title text. -->
+    <a href="https://www.google.com"><img src="google-logo.png" alt="Google logo" title="Visit Google" width="200" height="100"></a>
+    <br>
+    
+    <!-- Use element IDs (#id) to go to specific part of a webpage. This is called a bookmark. -->
+    <p><a href="https://en.wikipedia.org/wiki/Internet#History">Check out the history of the Internet</a></p>
+
+    <!-- Use relative urls to open images from another folder -->
+    <img src="/images/ocean.jpg" alt="Ocean" width="200" height="200">
+    <br>
+
+    <!-- Note that animated images (GIFs) can also be opened with img -->
+
+    <!-- Map along with area tags are used to create image maps. These are useful in creating clickable areas in an image -->
+    <!-- value in name attribute of map must match with usemap value of img for image maps to work -->
+    <!-- top-left corner of the image has coordinate (0,0). x-coordinate goes left to right and y-coordinate goes up to down -->
+    <!-- for poly, x and y coords are provided one after another so as to form a polygon over the coords -->
+    <img src="workplace.jpg" alt="Workplace" usemap="#workplacemap">
+    <map name="workplacemap">
+        <!-- shape can be rect(angle), circle, poly(gon) or default(entire image) -->
+        <!-- for rectangle, first two coords represent top-left corner while next two coords represent bottom-right corner of the rectangle -->
+        <area shape="rect" coords="34,44,270,350" href="https://en.wikipedia.org/wiki/Laptop" title="Laptop" alt="Laptop">
+        <area shape="rect" coords="290,172,333,250" href="https://en.wikipedia.org/wiki/Smartphone" title="Smartphone" alt="Smartphone">
+        <!-- for circle, first two represent centre coord, while the third number represents the radius of the image -->
+        <area shape="circle" coords="337,300,44" href="https://en.wikipedia.org/wiki/Coffee" title="Cup of coffee" alt="Cup of coffee">
+    </map>
+
+    <!-- picture tag is used to display more than one image with given media-size condition -->
+    <picture>
+        <!-- <if media width is atleast 800 pixels, show mountain.jpg -->
+        <source media="(min-width: 800px)" srcset="mountain.jpg">
+        <!-- else, if media width is at least 400 pixels but less than 800 pixels, show workplace.jpg -->
+        <source media="(min-width: 400px)" srcset="workplace.jpg">
+        <!-- else, display google-logo.jpg -->
+        <img src="google-logo.png" alt="Google logo">
+    </picture>
+
+    
+
 </body>
 </html>
