@@ -1,3 +1,5 @@
+<!-- Always encouraged to refer to documentations for extra information -->
+
 <!-- To define the document type as HTML5 -->
 <!DOCTYPE html>
 <!-- html is the root element of the document; starting point of every HTML document -->
@@ -9,8 +11,27 @@ lang as English and country as US -->
     <!-- To define the title of the HTML page, which is then displayed at the page's tab in the browser -->
     <title>Document</title>
     <!-- link tags are used to create relationships between the document and external resources -->
-    <!-- link tag can be used to create favicons, which are images displayed to the left of title -->
+    <!-- link tag is mostly used to create favicons, which are images displayed to the left of title, or to link stylesheets -->
     <link rel="icon" href="google-logo.png" type="image/x-icon">
+
+    <!-- meta is typically used to specify character set, page description, document author, keywords and viewport settings -->
+    <!-- though not displayed in webpage, metadata is used by browsers, search engines and other web services -->
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML reference">
+    <meta name="keywords" content="HTML, reference">
+
+    <!-- Below tells the browser to display the webpage with device's width and with 100% zoom level. This is one of the key steps for responsive 
+    web design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tip: Use <meta http-equiv="refresh" content="10"> to refresh the page every 10 seconds -->
+
+    <!-- script tag can be used to include JS codes -->
+    <script></script>
+
+    <!-- base tag is used to specify a base url and/or target for all relative urls -->
+    <!-- E.g. <base href="https://www.google.com" target="_blank"> . For now, it is kept as comment since this will ruin the relative paths for images 
+    in the body-->
 </head>
 <!-- body defines the document's body and serve as a container for visible contents of the webpage -->
 <body>
@@ -258,6 +279,55 @@ lang as English and country as US -->
         <li>Scored atleast 70% in Maths</li>
         <li>Scored atleast 80% in English</li>
     </ol>
+
+    <!-- Like p tag, div tags are block-level containers i.e. they always start in a new line and browser automatically adds margins before and after
+    the element -->
+    <!-- They take full width available -->
+    <div style="background-color: red;">
+        This text is in div element.
+    </div>
+    <!-- span is an inline container i.e. it does not start in a new line and take as much width as necessary -->
+    <span style="background-color: blue;">This is in span</span>
+    <span style="background-color:green;">This is also in span</span>
+    <br><br>
+
+    <!-- div is used to contain other HTML elements whereas span is used to mark up a part of a text or document -->
+
+    <!-- concepts of class and id will be clearer in CSS and JS. But on a high level, it should be known that both are used to specify an HTML element,
+    with the difference being that same class can be used by more than one element but id is used by only one. -->
+
+    <!-- Iframes are used to display a webpage within a webpage. These are rarely used, since it is vulnerable to cross-site attacks. -->
+    <iframe src="https://www.google.com" height="500" width="500" title="Google"></iframe>
+    <p>Iframe will not load because X-Frame-Options in response header is set as SAMEORIGIN i.e. the page can only be displayed if all ancestor frames are same origin to the page itself.</p>
+    <p>(Check in Network tab of Developer Tools)</p>
+    
+    <!-- To define keyboard input, kbd is used. Text is displayed in monospace font. -->
+    <p>To cut, press <kbd>Ctrl+X</kbd>. To paste, press <kbd>Ctrl+V</kbd></p>
+    <!-- To define sample output from a computer program, use samp. Text is displayed in monospace font. -->
+    <p>I got this message -> <samp>Do you want to continue? (Y/N): </samp></p>
+    <!-- To put computer codes, use code -->
+    <!-- In the code, character entities are used to signify < and > signs, otherwise the browser will confuse it for some tag -->
+    <pre>
+        <code>
+            include&lt;iostream&gt;
+            int main(){
+                cout<<"Hello World";
+            }
+        </code>
+    </pre>
+    <!-- To define a variable in a maths expression or programming, use var -->
+    <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+
+    <!-- Example of using only space and character entity nbsp (non-breaking space; adds space without breaking into a newline) -->
+    <p>Every   word   has   3   spaces   in   between</p>
+    <p>Every&nbsp;&nbsp;&nbsp;word&nbsp;&nbsp;&nbsp;has&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;spaces&nbsp;&nbsp;&nbsp;in&nbsp;&nbsp;&nbsp;between</p>
+
+    <!-- Some HTML symbols below. Refer to docs for more: -->
+    <p>Some HTML symbols: &#8704;&#8706;&#8707;&#913;&#914;&#915;&#169;&#174;&#8364;</p>
+
+    <!-- Some HTML emojis below. Emojis are characters from UTF-8 character set. Refer to docs for more: -->
+    <!-- To make them work, ensure meta tag is setup with utf-8 char set -->
+    <p>Some HTML emojis: &#128512;&#128516;&#128525;&#128151;&#128511;</p>
 
 </body>
 </html>
