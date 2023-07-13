@@ -328,6 +328,162 @@ lang as English and country as US -->
     <!-- Some HTML emojis below. Emojis are characters from UTF-8 character set. Refer to docs for more: -->
     <!-- To make them work, ensure meta tag is setup with utf-8 char set -->
     <p>Some HTML emojis: &#128512;&#128516;&#128525;&#128151;&#128511;</p>
+    <hr>
+    <!-- Forms are used to collect user input. form element is used as a container for different types of input elements, such as text fields, 
+    checkboxes, radio buttons, submit buttons, etc. -->
+    <!-- label is used to label input elements. If clicked on label text, input element gets focused. Its for attribute must 
+    be same as the id of the input it is referring to. -->
+    <!-- action attribute defines the file name to which the form data will be sent to for processing. If its blank, data is sent to current page. -->
+    <!-- method attribute defines the HTTP method to be used for sending form data. It can be GET (sent as URL variables; default) or 
+        POST (post transaction i.e. data is not visible). For sending private info, GET should never be used. -->
+    <form action="" target="_blank" method="get">
+        <!-- name attribute is important for every input, else its data will not be sent at all -->
+        <!-- text type input is used to record single-line text. It's sent to the server as "name=value" -->
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name"><br>
+
+        <!-- radio type input is used to select one of the given choices. All radio elements must have same name attribute. 
+            It's sent to the server as "name=value" -->
+        <input type="radio" name="gender" id="male" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="Female">
+        <label for="female">Female</label><br>
+
+        <!-- checkbox type input is used to select zero or more options. Data is sent to server as "name1=value1&name2=value2...". If nothing is 
+        selected, empty string will be sent. -->
+        <input type="checkbox" name="maths" value="Maths" id="maths">
+        <label for="maths">Mathematics</label>
+        <input type="checkbox" name="cs" value="Computer Science" id="cs">
+        <label for="cs">Computer Science</label>
+        <input type="checkbox" name="biology" value="Biology" id="biology">
+        <label for="biology">Biology</label><br>
+
+        <!-- submit type defines a button for sending form data to a form-handler (typically a server) provided in action attribute of form tag.
+        Try to enter data in above form and click Submit. You'll see a change in the URL above.  -->
+        <input type="submit" value="Submit"><br>
+        
+        <!-- password type defines a password field -->
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd"><br>
+
+        <!-- reset type resets all the form values to their defaults -->
+        <input type="reset" value="Reset all"><br>
+        
+        <!-- color type is used to record a color -->
+        <label for="favcolor">Select your favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor"><br>
+
+        <!-- date type is used to record date. You can use min and max attributes with yyyy-mm-dd values to add restrictions to date inputs. -->
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday"><br>
+
+        <!-- datetime-local is used to specify date and time with no timezone -->
+        <label for="birthdaytime">Birthday (date and time):</label>
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+
+        <!-- email type is used to specify an input field that should contain email addresses. Depending on browser support, they can be automatically 
+        validated. Some smartphones recognize this field and automatically add ".com" -->
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email"><br>
+
+        <!-- image type defines an image as a submit button. -->
+        <input type="image" src="mountain.jpg" alt="Submit" width="48" height="48"><br>
+
+        <!-- file type defines a file-select field and adds Browse button for file uploads -->
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile"><br>
+
+        <!-- month type allows user to select a month and year -->
+        <label for="bdaymonth">Birthday (month and year):</label>
+        <input type="month" id="bdaymonth" name="bdaymonth"><br>
+
+        <!-- number type defines a numeric data field. -->
+        <label for="quantity">Quantity (between 1 and 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5"><br>
+
+        <!-- range type is used to enter a number whose exact value is not important (like a slider) -->
+        <label for="vol">Volume (between 0 and 50):</label>
+        <input type="range" id="vol" name="vol" min="0" max="50"><br>
+
+        <!-- search type is used for search fields. -->
+        <label for="gsearch">Search Google:</label>
+        <input type="search" id="gsearch" name="gsearch"><br>
+
+        <!-- tel type is used for input fields that should contain a telephone number. -->
+        <label for="contactno">Mobile Number: </label>
+        <input type="tel" name="contactno" id="contactno"><br>
+
+        <!-- time type allows to select time (without timezone) -->
+        <label for="timepick">Time: </label>
+        <input type="time" name="time" id="timepick"><br>
+
+        <!-- url type is used for input fields that should contain a URL address. Some smartphones recognize the url type, and adds ".com" to the keyboard 
+            to match url input. -->
+        <label for="homepage">Add homepage: </label>
+        <input type="url" name="url" id="homepage"><br>
+
+        <!-- week type allows the user to select a week and year. -->
+        <label for="week">Select a week:</label>
+        <input type="week" id="week" name="week"><br><br>
+
+        <!-- The below text field is clickable but unmodifiable. -->
+        <input type="text" name="rdonly" id="rdonly" readonly value="This cannot be modified."><br>
+
+        <!-- The below radio buttons are unclickable and unmodifiable and one of them is checked by default -->
+        <input type="radio" name="earth" id="earthround" checked disabled><label for="earthround">The Earth is round</label>
+        <input type="radio" name="earth" id="earthflat" disabled><label for="earthflat">The Earth is flat</label><br>
+
+        <!-- The below text field has visible width of 50 characters but allows only 10 characters to be input. It also automatically gets focus when page 
+            loads. size attribute works for text, search, tel, url, email, and password fields. -->
+        <label for="fixedsize">Enter name: </label>
+        <input type="text" id="fixedsize" name="namelimit" size="50" maxlength="10" autofocus><br>
+
+        <!-- The below date fields has min of 2000-01-01 and max of 1980-01-01. min and max attributes work on number, range, date, datetime-local, 
+            month, time and week fields. -->
+        <label for="datemax">Enter a date before 1980-01-01:</label>
+        <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+        <label for="datemin">Enter a date after 2000-01-01:</label>
+        <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+        
+        <!-- The below file field allows more than one file uploads (while ctrl select or shift select). 
+            multiple attribute works on email and file types only. -->
+        <label for="files">Select files:</label>
+        <input type="file" id="files" name="files" multiple><br>
+
+        <!-- The below text field uses a pattern to compare its values against. pattern attribute works for text, 
+        date, search, url, tel, email, and password fields. If tried to submit form against the pattern, it will display error message 
+        with the given title.-->
+        <label for="country_code">Country code:</label>
+        <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br>
+
+        <!-- The below text field shows a hint to enter the value. placeholder works for text, search, url, tel, email, and password fields. -->
+        <input type="text" placeholder="Enter username"><br>
+
+        <!-- The below text field is required to be field. Works with text, search, url, tel, email, password, date pickers, number, 
+        checkbox, radio, and file input types. If left blank and submitted, error will be displayed. -->
+        <input type="text" required placeholder="Remarks(required)"><br>
+
+        <!-- Below number field allows to enter number between 2 and 100 with steps of 2. Works for number, range, date, datetime-local, month, time and week 
+        input types -->
+        <input type="number" name="numberstep" min="2" max="100" step="2"><br>
+
+        <!-- The input list attribute refers to a <datalist> element that contains pre-defined options for an input element -->
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist><br>
+
+        <!-- The below email has autocomplete set to off. autocomplete attribute works with form and the following input types: 
+        text, search, url, tel, email, password, datepickers, range, and color. -->
+        <input type="email" name="autooff" placeholder="Email with autocomplete deactivated" size="30">
+
+        
+
+    </form>
 
 </body>
 </html>
