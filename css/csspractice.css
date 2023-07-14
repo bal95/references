@@ -1,0 +1,137 @@
+/* Always refer to docs for extra info */
+
+/* CSS stands for Cascading Style Sheets. These are used to define how HTML elements should be displayed in the system. In simpler words, they are used to 
+style a website. It's called "Cascading" because when styling is applied on one element, all of its child elements get the same styles i.e it flows down 
+like a cascade.*/
+
+/* Every CSS style consists of rules. Each rule is of the format as follows: 
+    selector{
+        property1:value1;
+        property2:value2;
+        ...
+    }
+
+    selector points to one or more HTML elements. In the description block contains CSS properties and their values.
+*/
+
+/* Below uses id selector to change font-color of an element of a given id*/
+#idselect{
+    color:blue;
+}
+
+/* Below uses class selector to style all elements of same class. To style particular elements of a class, use element.class selector */
+.classselect{
+    color:red;
+}
+
+/* Below uses universal selector to change background-color of all elements in the webpage */
+*{
+    background-color: peachpuff;
+}
+
+/* Below boldens all p elements */
+p{
+    font-weight: bold;
+}
+
+/* Below groups different elements to apply same font-family rules on them. Browser checks left-to-right and the first font family, if supported by browser, 
+gets selected. */
+h1,p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Below use rgba, hex and hsla coloring functions to apply background colors */
+/* rgba(red, green,blue,alpha) - red, blue and green value are provided between 0 and 255 and alpha ( degree of opacity) is between 
+0 and 1 (1 means 100% opaque) */
+#prgba{
+    background-color: rgba(130, 167, 205,0.8);
+}
+
+/* hex color is of form #rrggbb, where rr, gg and bb are hexadecimal nos. for red, green and blue colors, lying between 00 and ff.
+Sometimes, it can be of form #rgb, e.g.#f0e, which is same as #ff00ee */
+#phex{
+    background-color: #ef00c1;
+}
+
+/* hsla(hue,saturation,lightness,alpha) - based on RGB color wheel. Hue is an angle on the wheel, where 0 is for red, 120 for green and 240 for blue. 
+Saturation (color intensity) controls how saturated the color must be. Lies between 0 and 100%, where latter means the color is fully saturated.
+Lightness controls how light or dark the color is. Lies between 0 and 100%, where 0% means fully dark (black) and 100% means fully light (white)*/
+#phsla{
+    background-color: hsla(150, 75%, 70%, 0.9);
+}
+
+#divback{
+    background-color: orange;
+    /* Sets height of div. width can also be set with width property. */
+    height:350px;
+
+    /* below sets background image using url function that points to local image */
+    background-image: url("google-logo.png");
+
+    /* by default, background image repeats in both x and y directions. This can be controlled using background-repeat property */
+    /* background-repeat takes repeat-x, repeat-y values to repeat images only in x or y directions respectively */
+    /* Below disables repetition of images */
+    background-repeat: no-repeat;
+
+    /* Below sets the starting position of background image. Takes two values for x and y positions. */
+    background-position: center center;
+
+    /* Below specifies whether background image should scroll (default) or fixed with scrolling of the page */
+    background-attachment: scroll;
+
+    /* All the above properties can be consolidated in a single background property with given order: 
+    background: color image repeat attachment position */
+}
+
+/* Below details how borders are applied */
+h2{
+    /* Defines what kind of border needs to be displayed. It can have values in one of the below formats: 
+        a) top right bottom left - 4 values
+        b) top-bottom left-right - 2 values
+        c) top left-right bottom - 3 values
+        d) all-sides - 1 value */
+    border-style: solid double dotted;
+
+    /* Defines the width of the border. Can follow same formats as border style */
+    border-width: 3px 5px;
+
+    /* Defines color for all four borders. Can follow same formats as border style */
+    border-color: red blue green yellow;
+
+    /* Use shorthand property border to consolidate all above values as follows: 
+    border: width style color 
+    Also, each border can have its own consolidated style using border-top, border-bottom, border-left or border-right properties*/
+
+    /* Adds rounded borders to each of four corners. It can have values in one of the below formats: 
+        a) top-left top-right bottom-right bottom-left - 4 values
+        b) top-left top-right&bottom-left bottom-right - 3 values
+        c) top-left&bottom-right top-right&bottom-left - 2 values
+        d) all-corners - 1 value */
+    border-radius: 10px 15px 20px;
+}
+
+/* Below details how margins are applied. Margins create spaces around elements, outside of any defined borders. */
+#pmargin{
+    /* Creates margins of given widths for four sides. Defines what kind of border needs to be displayed. It can have values in one of the below formats: 
+        a) top right bottom left - 4 values
+        b) top-bottom left-right - 2 values
+        c) top left-right bottom - 3 values
+        d) all-sides - 1 value */
+    margin: 40px;
+}
+
+#pmargincollapse{
+    /* Usually margin space between both p should be 40px + 20px = 60px */
+    /* Instead, top margin of this p will collapse with bottom margin of #pmargin and resulting margin space will be equal to largest of two margins i.e. 
+    40px.*/
+    /* Margin collapse only happens for top and bottom margins */
+    /* Use browser's developer tools to check */
+    margin: 20px 0 0 0;
+}
+
+#pmarginauto{
+    /* Horizontally centers an element inside its container. Element must have specified width so that auto margin can work */
+    /* Element takes up specified width. Remainder width is split between left and right margins */
+    width: 300px;
+    margin:auto;
+}

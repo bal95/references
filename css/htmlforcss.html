@@ -1,0 +1,35 @@
+<!-- Browser default CSS has lowest priority in cascading order -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- External CSS is linked to the webpage. More than one stylesheet can be linked but if they style same element, the rules of the last stylesheet 
+    will be applied. External CSS has 2nd highest priority in cascading order.-->
+    <link rel="stylesheet" href="csspractice.css">
+    <title>Document</title>
+
+    <!-- Internal CSS has 3rd highest priority in cascading order. -->
+    <!-- Example of internal CSS: -->
+    <style>
+        h1{
+            background-color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Practice</h1>
+    <!-- The word "styled" is styled using inline CSS. Inline CSS has highest priority in cascading order. -->
+    <p id="idselect">This is <span style="color:violet">styled</span> using id selector.</p>
+    <p class="classselect">This is styled using class select.</p>
+    <p id="prgba">This will be colored with rgba function</p>
+    <p id="phex">This will be colored using hex value</p>
+    <p id="phsla">This will be covered with hsla function</p>
+    <div id="divback"></div>
+    <h2>This heading has border</h2>
+    <p id="pmargin">This p has margins</p>
+    <p id="pmargincollapse">Top margin of this p will collapse with bottom of above p</p>
+    <p id="pmarginauto">This p has margin set to auto</p>
+</body>
+</html>
