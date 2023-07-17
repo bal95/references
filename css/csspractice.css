@@ -112,7 +112,7 @@ h2{
 
 /* Below details how margins are applied. Margins create spaces around elements, outside of any defined borders. */
 #pmargin{
-    /* Creates margins of given widths for four sides. Defines what kind of border needs to be displayed. It can have values in one of the below formats: 
+    /* Creates margins of given widths for four sides. It can have values in one of the below formats: 
         a) top right bottom left - 4 values
         b) top-bottom left-right - 2 values
         c) top left-right bottom - 3 values
@@ -134,4 +134,24 @@ h2{
     /* Element takes up specified width. Remainder width is split between left and right margins */
     width: 300px;
     margin:auto;
+}
+
+/* Below details how paddings are applied. Margins create spaces around elements, inside of any defined borders. */
+#ppadding{
+    width: 300px;
+    height: 300px;
+    /* Creates paddings of given widths for four sides. It can have values in one of the below formats: 
+        a) top right bottom left - 4 values
+        b) top-bottom left-right - 2 values
+        c) top left-right bottom - 3 values
+        d) all-sides - 1 value */
+    padding: 30px;
+}
+
+#ppaddingboxsized{
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    /* By applying box-sizing, total width and height remains the same, no matter the amount of padding applied. Check developer tools. */
+    box-sizing: border-box;
 }
