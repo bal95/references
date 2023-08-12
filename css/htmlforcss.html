@@ -33,5 +33,41 @@
     <p id="pmarginauto">This p has margin set to auto</p>
     <p id="ppadding">This p has padding. Note that the padding width gets added to the total width and height</p>
     <p id="ppaddingboxsized">This p has padding but uses box-sizing property, due to which the total width and height remains the same, no matter the amount of padding applied.</p>
+    <div id="htwdstatic">Height and width of this div is always 300px. This does not include padding, border and margin unless box-sizing property is used</div>
+    <div id="htwddynamic">Height is 300px but width of this div is always 50% of containing block i.e. body. Try to change the size of this window to see the effect.</div>
+    <div id="maxwid">This div has max-width of 400px. Try to reduce browser width and see how it adjusts itself.</div>
+    <div id="outlinebox">This element has outline, which is drawn outside of border. Outlines do not contribute to element's dimensions and may overlap with other elements</div><br>
+    <div id="textalign">
+        Text alignment shown below:
+        <p id="textcenter">Center</p>
+        <p id="textleft">Left</p>
+        <p id="textright">Right</p>
+        <p id="textjustify">Text alignment is justified, which means every line is stretched to have equal width</p>
+        <p id="alignlast">In this paragraph, only the alignment of last line is changed.</p>
+    </div>
+    <p id="textdir">Direction of this text has been reversed</p>
+    <div id="textdecor">
+        Text decoration shown below: <br><br>
+        <span id="textoverline">Blue Overline&nbsp;</span><span id="textunderline">Wavy Underline&nbsp;</span><span id="textlinethru">3px thick Line-through&nbsp;</span>
+        <span id="textoverunder">Over+Under</span>
+    </div>
+    <p id="texttransform">
+        <span id="textupper" style="text-transform: uppercase;">uppercase</span>
+        <span id="textlower" style="text-transform: lowercase;">LOWERCASE</span>
+        <span id="textcapitalz" style="text-transform: capitalize;">capitalcase</span>
+    </p>
+    <p id="textindent">The first line of the text has been indented</p>
+    <p id="letterspace">
+        <span id="incspace">This text has increased letter spacing,</span>
+        <span id="decspace">whereas this has reduced spacing.</span>
+    </p>
+    <p id="inclinespace">This text has increased line spacing, or the space between two lines</p>
+    <p id="declinespace">This text has decreased line spacing, or the space between two lines</p>
+    <p id="wordspace">
+        <span id="wrdincspace">This text has increased word spacing,</span>
+        <span id="wrddecspace">whereas this has reduced spacing.</span>
+    </p>
+    <p id="whtspc">     This text has white-space set to no wrap</p>
+    <p id="txtshdw">This text has shadow!</p>
 </body>
 </html>

@@ -155,3 +155,153 @@ h2{
     /* By applying box-sizing, total width and height remains the same, no matter the amount of padding applied. Check developer tools. */
     box-sizing: border-box;
 }
+
+#htwdstatic{
+    width: 300px;
+    height: 300px;
+    background-color: blueviolet;
+}
+
+#htwddynamic{
+    /* Width will be 50% of containing block. In this case, it will be body */
+    width: 50%;
+    height: 300px;
+    background-color: powderblue;
+}
+
+/* Using max-width of 400px, width of the element can never exceed 400px. Moreover, when browser width is less than element, the width of the element gets 
+shrinked and, if needed, content moves to next line. This is different from when max-width is not used, in which, instead, browser will only show horizontal 
+scroll bar at the bottom */
+#maxwid{
+    max-width: 400px;
+    height: 200px;
+    background-color: yellowgreen;
+}
+
+#outlinebox{
+    width: 300px;
+    border: 2px solid black;
+    /* outlines are drawn outside border */
+    outline-style: dashed;
+    outline-color: blue;
+    outline-width: 3px;
+    /* above rules can be written in short as-> outline: 3px dashed blue. Style is required to form an outline, others are optional */
+    /* outline offset adds space between outline and border. This space is transparent */
+    outline-offset: 5px;
+}
+
+#textalign{
+    /* Font color inside div will be red */
+    color: red;
+    width: 500px;
+    border: 2px solid black;
+}
+
+/* Below four decide how the text will be aligned */
+#textcenter{
+    text-align: center;
+}
+
+#textleft{
+    text-align: left;
+}
+
+#textright{
+    text-align: right;
+}
+
+#textjustify{
+    width: 300px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 5px;
+    text-align: justify;
+}
+
+/* Below changes the alignment of last line */
+#alignlast{
+    border: 1px solid black;
+    width: 300px;
+    text-align-last: right;
+}
+
+/* By using direction and bidi-override, text direction of an element can be changed */
+#textdir{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+#textdecor{
+    width: 500px;
+    border: 2px solid black;
+}
+
+/* Below apply a decoration line on a text */
+
+#textoverline{
+    text-decoration-line: overline;
+    text-decoration-color: blue;
+}
+#textunderline{
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+#textlinethru{
+    text-decoration-line: line-through;
+    text-decoration-thickness: 3px;
+}
+#textoverunder{
+    text-decoration-line: overline underline;
+}
+
+/* In short, it can be written as: text-decoration: line color style thickness, where line is mandatory */
+/* Tip: to remove underlines from links, use text-decoration: none */
+
+/* Below indents first line of text by given length */
+#textindent{
+    width: 250px;
+    text-indent: 30px;
+}
+
+/* Below two show how to change letter spacing */
+#incspace{
+    letter-spacing: 3px;
+}
+#decspace{
+    letter-spacing: -3px;
+}
+
+/* Below show how to change line spacing i.e. space between two lines. Values are in percent/100 e.g. 0.8 = 80% */
+#inclinespace, #declinespace{
+    width: 200px;
+    border: 2px solid black;
+}
+#inclinespace{
+    line-height: 1.7;
+}
+#declinespace{
+    line-height: 0.7;
+}
+
+/* Below show how to change word spacing */
+#wrdincspace{
+    word-spacing: 5px;
+}
+#wrddecspace{
+    word-spacing: -7px;
+}
+
+/* Below handles whitespace. Other values are normal, pre, pre-line and pre-wrap */
+#whtspc{
+    width: 150px;
+    height: 150px;
+    background-color: pink;
+    white-space: nowrap;
+}
+
+/* Below applies text shadow. It's of format "horizontal-shadow vertical-shadow blur color" 
+More the values of horizontal-shadow vertical-shadow, more shifted will they appear from original text
+Less the value of shadow blur, more sharp will it appear*/
+#txtshdw{
+    text-shadow: 2px 2px 5px green;
+}
